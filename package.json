@@ -2,9 +2,9 @@
   "name": "chat-app-server",
   "version": "1.0.0",
   "description": "Serveur Express pour une application de messagerie",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
