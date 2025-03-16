@@ -49,14 +49,10 @@ app.get('/cpt/inc', function(req, res) {
 app.post('/msg/post', express.json(), function(req, res) {
   const { pseudo, msg, date } = req.body;
 
-  if (!pseudo || !msg) {
-    return res.status(400).json({ error: "Pseudo et message sont nécessaires" });
+  if (!msg) {
+    return res.status(400).json({ error: "Un message est nécessaire" });
   }
-
-  // Ajoute le message à la liste
   allMsgs.push({ pseudo, msg, date });
-
-  // Réponse avec un code de succès
   res.status(200).json({ code: 1 });
 });
 
